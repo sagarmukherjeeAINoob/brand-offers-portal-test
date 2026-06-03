@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script data-goatcounter="https://paytm-brands.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
@@ -197,7 +199,7 @@ footer strong{color:#fff}
 </footer>
 
 <script>
-const BASE = 'https://paytm-ppsl-merchant.github.io/paytm-brand-offers';
+const BASE = 'https://sagarmukherjeeAINoob.github.io/brand-offers-portal-test';
 
 const BRANDS = [
   {name:'OnePlus',           file:'OnePlus_Jun2026_NoCostEMIOffers.pdf',            color:'#e53e3e', logo:'logos/oneplus.png'},
@@ -303,6 +305,8 @@ function card(b) {
   return `<div class="card">${logo}
     <div class="card-name" style="color:${b.color}">${b.name}</div>
     <a class="btn" href="${BASE}/${b.file}" target="_blank" rel="noopener">⬇&nbsp;Download PDF</a>
+    // Find the <a class="btn"> line and add onclick
+onclick="if(window.goatcounter)goatcounter.count({path:'download-${b.name.toLowerCase().replace(/\s+/g,'-')}',title:'Download: ${b.name}'})"
   </div>`;
 }
 function render(list){grid.innerHTML=list.map(card).join('');}
